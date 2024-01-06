@@ -1,0 +1,10 @@
+.stock_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.stock_row {
+    cursor: pointer;
+}

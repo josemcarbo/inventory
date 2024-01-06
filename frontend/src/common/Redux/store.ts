@@ -1,10 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit"
+import { combineReducers, configureStore } from "@reduxjs/toolkit"
 import NavBarSlice from "./Slices/navBarSlice"
+import { stockApi } from "../Api/stockApi"
 
 const store = configureStore({
-  reducer: {
+  reducer: combineReducers({
     navBar: NavBarSlice,
-  },
+    [stockApi.reducerPath]: stockApi.reducer,
+  }),
+  middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware()
+        .concat(stockApi.middleware)
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

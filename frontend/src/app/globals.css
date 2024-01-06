@@ -13,6 +13,9 @@ html {
     /* 1 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 12px;
 }
 
 /* Sections
@@ -24,6 +27,7 @@ html {
 
 body {
     margin: 0;
+    background-color: #f5faff;
 }
 
 /**
@@ -376,4 +380,27 @@ template {
 
 [hidden] {
     display: none;
+}
+
+table {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+table tbody {
+    font-weight: 300;  
+}
+
+table thead {
+    font-weight: 500;  
+}
+
+table tbody tr:hover {
+    background-color: #ececf4;
+}
+
+table tbody td, table thead td {
+    padding: 5px 5px;
 }
